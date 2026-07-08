@@ -35,7 +35,7 @@ export default async function Dashboard() {
         dailyLog = log;
       }
     }
-  } catch (_err) {
+  } catch {
     console.log("Supabase not configured yet, using default values");
   }
 

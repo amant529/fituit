@@ -31,7 +31,7 @@ export default function TopNav({ title }: { title: string }) {
             }
           }
         }
-      } catch (_err) {
+      } catch {
         console.log("Supabase not configured yet, using default values");
       }
     }
