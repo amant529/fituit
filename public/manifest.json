@@ -1,0 +1,21 @@
+{
+  "name": "FITUIT",
+  "short_name": "FITUIT",
+  "description": "Strength. Balance. You. No gym. No weights. Calisthenics + Yoga hybrid.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#0a0a0a",
+  "icons": [
+    {
+      "src": "/icons/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/icons/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
