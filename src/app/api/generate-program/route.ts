@@ -33,7 +33,8 @@ export async function POST(req: Request) {
   try {
     const { profile, imageBase64, userId } = await req.json();
 
-    const messages: Array<Record<string, unknown>> = [
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    const messages: any[] = [
       {
         role: "system",
         content: `You are FITUIT Coach, a world-class Calisthenics & Yoga expert. 
@@ -48,7 +49,8 @@ export async function POST(req: Request) {
       }
     ];
 
-    const userContent: Array<Record<string, unknown>> = [
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    const userContent: any[] = [
       { type: "text", text: `Profile: ${JSON.stringify(profile)}` }
     ];
 
