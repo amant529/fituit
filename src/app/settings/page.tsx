@@ -24,13 +24,21 @@ export default function Settings() {
       if (user) {
         const { data: profile } = await supabase
           .from("users")
-          .select("referral_code, referrals_count, is_premium")
+          .select("referral_code, referrals_count, is_premium, subscription_expires_at")
           .eq("id", user.id)
           .single();
         if (profile) {
           setReferralCode(profile.referral_code || "");
           setReferralsCount(profile.referrals_count || 0);
-          setIsPremium(profile.is_premium || false);
+          
+          let hasPremium = profile.is_premium || false;
+          if (hasPremium && profile.subscription_expires_at) {
+            const expiresAt = new Date(profile.subscription_expires_at);
+            if (expiresAt < new Date()) {
+              hasPremium = false;
+            }
+          }
+          setIsPremium(hasPremium);
         }
       }
     }

@@ -61,22 +61,12 @@ export async function signup(formData: FormData) {
         // Find friend
         const { data: friend } = await supabase
           .from('users')
-          .select('id, referrals_count')
+          .select('id')
           .eq('referral_code', referralCode.toUpperCase())
           .single();
           
         if (friend) {
           referredBy = referralCode.toUpperCase();
-          const newCount = (friend.referrals_count || 0) + 1;
-          
-          // Increment friend's count and grant premium if they hit 3
-          await supabase
-            .from('users')
-            .update({ 
-              referrals_count: newCount,
-              is_premium: newCount >= 3 ? true : undefined
-            })
-            .eq('id', friend.id);
         }
       }
 

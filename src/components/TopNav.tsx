@@ -18,12 +18,19 @@ export default function TopNav({ title }: { title: string }) {
         if (user) {
           const { data: profile } = await supabase
             .from("users")
-            .select("full_name, is_premium")
+            .select("full_name, is_premium, subscription_expires_at")
             .eq("id", user.id)
             .single();
 
           if (profile) {
-            setIsPremium(profile.is_premium || false);
+            let hasPremium = profile.is_premium || false;
+            if (hasPremium && profile.subscription_expires_at) {
+              const expiresAt = new Date(profile.subscription_expires_at);
+              if (expiresAt < new Date()) {
+                hasPremium = false;
+              }
+            }
+            setIsPremium(hasPremium);
             // Hardcoding streak for demo, could be fetched from DB
             setStreak(12);
             if (profile.full_name) {

@@ -35,18 +35,50 @@ export async function POST(req: Request) {
       
       if (userId) {
         // Upgrade user in Supabase
-        const { error } = await supabase
+        const { data: user, error } = await supabase
           .from('users')
           .update({
             is_premium: true,
             lemonsqueezy_customer_id: lsCustomerId.toString(),
             tier: payload.data.attributes.variant_name.toLowerCase().includes('elite') ? 'elite' : 'core'
           })
-          .eq('id', userId);
+          .eq('id', userId)
+          .select('referred_by')
+          .single();
 
         if (error) {
           console.error("Supabase update error:", error);
           return NextResponse.json({ error: "Failed to update user" }, { status: 500 });
+        }
+
+        // --- Referral Engine Logic ---
+        if (eventName === 'subscription_created' && user?.referred_by) {
+          const { data: friend } = await supabase
+            .from('users')
+            .select('id, referrals_count')
+            .eq('referral_code', user.referred_by)
+            .single();
+
+          if (friend) {
+            const newCount = (friend.referrals_count || 0) + 1;
+            
+            // eslint-disable-next-line @typescript-eslint/no-explicit-any
+            const updatePayload: any = { referrals_count: newCount };
+            
+            // If they reached a multiple of 3, grant 1 month free of 'core'
+            if (newCount > 0 && newCount % 3 === 0) {
+              const expiresAt = new Date();
+              expiresAt.setMonth(expiresAt.getMonth() + 1);
+              updatePayload.is_premium = true;
+              updatePayload.tier = 'core';
+              updatePayload.subscription_expires_at = expiresAt.toISOString();
+            }
+
+            await supabase
+              .from('users')
+              .update(updatePayload)
+              .eq('id', friend.id);
+          }
         }
       }
     }
