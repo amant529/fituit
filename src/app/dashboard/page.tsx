@@ -2,11 +2,9 @@ import { createClient } from '@/utils/supabase/server'
 import Link from "next/link";
 import BottomNav from "@/components/BottomNav";
 import TopNav from "@/components/TopNav";
-import { getServerDictionary } from "@/i18n/server";
 
 export default async function Dashboard() {
   const supabase = createClient()
-  const dict = getServerDictionary();
   
   // Fetch their profile name from our users table
   let user = null;
@@ -52,14 +50,14 @@ export default async function Dashboard() {
 
   return (
     <div className="min-h-screen bg-[#0D120E] text-white flex flex-col font-sans pb-20">
-      <TopNav title={dict.nav.home} />
+      <TopNav title="Home" />
 
       <main className="flex-1 px-6 py-8 flex flex-col gap-8 max-w-2xl mx-auto w-full">
         
         {/* Coach Message */}
         <section className="bg-gray-900 rounded-2xl p-5 border border-gray-800 relative overflow-hidden">
           <div className="absolute top-0 right-0 w-32 h-32 bg-blue-500/10 rounded-full blur-3xl"></div>
-          <h2 className="text-sm font-bold text-gray-500 mb-2 uppercase tracking-wider">{dict.dashboard.welcome_back}</h2>
+          <h2 className="text-sm font-bold text-gray-500 mb-2 uppercase tracking-wider">Welcome Back, Athlete</h2>
           <p className="text-lg font-medium leading-relaxed">
             &quot;Your lower back was tight yesterday. Today&apos;s session includes targeted mobility work before we load the core. Focus on form over reps.&quot;
           </p>
