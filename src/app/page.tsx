@@ -1,7 +1,11 @@
 import Link from "next/link";
 import Image from "next/image";
+import { getServerDictionary } from "@/i18n/server";
+import LanguageSwitcher from "@/components/LanguageSwitcher";
 
 export default function Home() {
+  const dict = getServerDictionary();
+
   return (
     <div className="min-h-screen bg-[#0a0a0a] text-white flex flex-col font-sans">
       <header className="px-6 py-6 flex justify-between items-center max-w-7xl mx-auto w-full">
@@ -11,24 +15,27 @@ export default function Home() {
             FITUIT
           </span>
         </div>
-        <Link href="/onboarding" className="text-sm font-bold bg-white text-black px-5 py-2.5 rounded-full hover:bg-gray-200 transition-colors shadow-lg">
-          Join Now
-        </Link>
+        <div className="flex items-center gap-4">
+          <LanguageSwitcher />
+          <Link href="/onboarding" className="text-sm font-bold bg-white text-black px-5 py-2.5 rounded-full hover:bg-gray-200 transition-colors shadow-lg">
+            {dict.landing.join_now}
+          </Link>
+        </div>
       </header>
       
       <main className="flex-1 flex flex-col items-center justify-center px-6 text-center">
         <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight mb-6 bg-gradient-to-br from-white to-gray-500 bg-clip-text text-transparent">
-          Strength. Balance. You.
+          {dict.landing.headline}
         </h1>
         <p className="text-lg md:text-xl text-gray-400 max-w-2xl mb-10">
-          No gym. No weights. The ultimate Calisthenics + Yoga hybrid built for real results. Your personalized journey starts here.
+          {dict.landing.subheadline}
         </p>
         
         <Link 
           href="/onboarding" 
           className="bg-white text-black text-lg font-bold px-8 py-4 rounded-full shadow-[0_0_30px_rgba(255,255,255,0.3)] hover:scale-105 transition-transform duration-300 mb-12 inline-block"
         >
-          Start Your Assessment
+          {dict.landing.start_assessment}
         </Link>
         
         <div className="flex flex-col md:flex-row gap-8 items-center justify-center opacity-80">
@@ -43,7 +50,7 @@ export default function Home() {
             </div>
             <div className="text-sm text-left ml-2">
               <p className="font-bold">10,000+</p>
-              <p className="text-gray-400">active members</p>
+              <p className="text-gray-400">{dict.landing.active_members}</p>
             </div>
           </div>
           
@@ -55,7 +62,7 @@ export default function Home() {
             </div>
             <div className="text-sm text-left">
               <p className="font-bold">4.9/5</p>
-              <p className="text-gray-400">from 2k+ reviews</p>
+              <p className="text-gray-400">{dict.landing.reviews}</p>
             </div>
           </div>
         </div>

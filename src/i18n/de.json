@@ -1,0 +1,36 @@
+{
+  "landing": {
+    "join_now": "Jetzt Beitreten",
+    "headline": "Kraft. Balance. Du.",
+    "subheadline": "Kein Fitnessstudio. Keine Gewichte. Das ultimative Calisthenics + Yoga Hybrid, gebaut für echte Ergebnisse. Deine personalisierte Reise beginnt hier.",
+    "start_assessment": "Starte deine Bewertung",
+    "active_members": "aktive Mitglieder",
+    "reviews": "von über 2k Bewertungen"
+  },
+  "nav": {
+    "home": "Startseite",
+    "progress": "Fortschritt",
+    "food": "Essen",
+    "settings": "Einstellungen",
+    "dashboard": "Dashboard",
+    "login": "Einloggen",
+    "signup": "Registrieren"
+  },
+  "dashboard": {
+    "welcome_back": "Willkommen zurück",
+    "your_plan": "Dein Plan",
+    "generate_new": "Neuen Plan erstellen",
+    "log_workout": "Workout protokollieren",
+    "log_food": "Essen protokollieren",
+    "today_meal": "Heutige Mahlzeit",
+    "no_plan": "Kein aktiver Plan gefunden."
+  },
+  "settings": {
+    "referral_engine": "Empfehlungsmaschine",
+    "referral_desc": "Lade 3 Freunde ein, um 1 Monat Elite kostenlos zu erhalten!",
+    "your_invite_link": "Dein Einladungslink",
+    "logout": "Abmelden",
+    "language": "Sprache",
+    "select_language": "Sprache auswählen"
+  }
+}

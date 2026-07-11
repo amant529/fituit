@@ -1,0 +1,36 @@
+{
+  "landing": {
+    "join_now": "Rejoindre",
+    "headline": "Force. Équilibre. Vous.",
+    "subheadline": "Pas de salle de sport. Pas de poids. L'hybride ultime Callisthénie + Yoga conçu pour de vrais résultats. Votre parcours personnalisé commence ici.",
+    "start_assessment": "Commencez Votre Évaluation",
+    "active_members": "membres actifs",
+    "reviews": "à partir de 2k+ avis"
+  },
+  "nav": {
+    "home": "Accueil",
+    "progress": "Progrès",
+    "food": "Nourriture",
+    "settings": "Paramètres",
+    "dashboard": "Tableau de bord",
+    "login": "Connexion",
+    "signup": "S'inscrire"
+  },
+  "dashboard": {
+    "welcome_back": "Bon retour",
+    "your_plan": "Votre Plan",
+    "generate_new": "Générer un Nouveau Plan",
+    "log_workout": "Enregistrer l'Entraînement",
+    "log_food": "Enregistrer le Repas",
+    "today_meal": "Repas du Jour",
+    "no_plan": "Aucun plan actif trouvé."
+  },
+  "settings": {
+    "referral_engine": "Moteur de Parrainage",
+    "referral_desc": "Invitez 3 amis pour obtenir 1 mois d'Elite gratuit !",
+    "your_invite_link": "Votre Lien d'Invitation",
+    "logout": "Déconnexion",
+    "language": "Langue",
+    "select_language": "Sélectionner la Langue"
+  }
+}

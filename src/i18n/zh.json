@@ -1,0 +1,36 @@
+{
+  "landing": {
+    "join_now": "立即加入",
+    "headline": "力量。平衡。你。",
+    "subheadline": "没有健身房。没有重物。专为真实结果打造的终极自重训练+瑜伽混合体系。您的个性化旅程从这里开始。",
+    "start_assessment": "开始您的评估",
+    "active_members": "活跃会员",
+    "reviews": "来自2k+评论"
+  },
+  "nav": {
+    "home": "主页",
+    "progress": "进度",
+    "food": "食物",
+    "settings": "设置",
+    "dashboard": "仪表板",
+    "login": "登录",
+    "signup": "注册"
+  },
+  "dashboard": {
+    "welcome_back": "欢迎回来",
+    "your_plan": "您的计划",
+    "generate_new": "生成新计划",
+    "log_workout": "记录训练",
+    "log_food": "记录食物",
+    "today_meal": "今日餐食",
+    "no_plan": "未找到活动计划。"
+  },
+  "settings": {
+    "referral_engine": "推荐引擎",
+    "referral_desc": "邀请3个朋友即可免费获得1个月的Elite！",
+    "your_invite_link": "您的邀请链接",
+    "logout": "登出",
+    "language": "语言",
+    "select_language": "选择语言"
+  }
+}

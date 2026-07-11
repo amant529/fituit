@@ -1,0 +1,36 @@
+{
+  "landing": {
+    "join_now": "Join Now",
+    "headline": "Strength. Balance. You.",
+    "subheadline": "No gym. No weights. The ultimate Calisthenics + Yoga hybrid built for real results. Your personalized journey starts here.",
+    "start_assessment": "Start Your Assessment",
+    "active_members": "active members",
+    "reviews": "from 2k+ reviews"
+  },
+  "nav": {
+    "home": "Home",
+    "progress": "Progress",
+    "food": "Food",
+    "settings": "Settings",
+    "dashboard": "Dashboard",
+    "login": "Log in",
+    "signup": "Sign Up"
+  },
+  "dashboard": {
+    "welcome_back": "Welcome back",
+    "your_plan": "Your Plan",
+    "generate_new": "Generate New Plan",
+    "log_workout": "Log Workout",
+    "log_food": "Log Food",
+    "today_meal": "Today's Meal",
+    "no_plan": "No active plan found."
+  },
+  "settings": {
+    "referral_engine": "Referral Engine",
+    "referral_desc": "Invite 3 friends to get 1 month of Elite free!",
+    "your_invite_link": "Your Invite Link",
+    "logout": "Logout",
+    "language": "Language",
+    "select_language": "Select Language"
+  }
+}

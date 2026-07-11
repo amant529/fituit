@@ -2,15 +2,17 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { useDictionary } from "@/i18n/LanguageProvider";
 
 export default function BottomNav() {
   const pathname = usePathname();
+  const dict = useDictionary();
 
   const tabs = [
-    { name: "HOME", href: "/dashboard", icon: "🏠" },
-    { name: "WORKOUT", href: "/calisthenics", icon: "💪" },
-    { name: "NUTRITION", href: "/food", icon: "🥗" },
-    { name: "PROGRESS", href: "/progress", icon: "📈" },
+    { name: dict.nav.dashboard, href: "/dashboard", icon: "🏠" },
+    { name: dict.nav.progress, href: "/progress", icon: "📈" },
+    { name: dict.nav.food, href: "/food", icon: "🥗" },
+    { name: dict.nav.settings, href: "/settings", icon: "⚙️" },
   ];
 
   return (

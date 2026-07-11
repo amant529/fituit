@@ -5,9 +5,12 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { logout } from "../login/actions";
 import { createClient } from "@/utils/supabase/client";
+import { useDictionary } from "@/i18n/LanguageProvider";
+import LanguageSwitcher from "@/components/LanguageSwitcher";
 
 export default function Settings() {
   const router = useRouter();
+  const dict = useDictionary();
   const [whatsapp, setWhatsapp] = useState("");
   const [notifications, setNotifications] = useState(true);
   const [referralCode, setReferralCode] = useState("");
@@ -36,9 +39,12 @@ export default function Settings() {
 
   return (
     <div className="min-h-screen bg-[#0a0a0a] text-white flex flex-col font-sans pb-20">
-      <header className="px-6 py-6 border-b border-gray-900 flex items-center gap-4">
-        <button onClick={() => router.back()} className="text-gray-400 hover:text-white">←</button>
-        <h1 className="text-2xl font-bold tracking-tighter">Settings</h1>
+      <header className="px-6 py-6 border-b border-gray-900 flex justify-between items-center">
+        <div className="flex items-center gap-4">
+          <button onClick={() => router.back()} className="text-gray-400 hover:text-white">←</button>
+          <h1 className="text-2xl font-bold tracking-tighter">{dict.nav.settings}</h1>
+        </div>
+        <LanguageSwitcher />
       </header>
 
       <main className="flex-1 px-6 py-8 flex flex-col gap-8 max-w-xl mx-auto w-full">
@@ -62,12 +68,12 @@ export default function Settings() {
         </section>
 
         <section>
-          <h2 className="text-sm font-bold text-gray-500 uppercase tracking-wider mb-4">Refer a Friend</h2>
+          <h2 className="text-sm font-bold text-gray-500 uppercase tracking-wider mb-4">{dict.settings.referral_engine}</h2>
           <div className="bg-gray-900 rounded-2xl p-5 border border-[#C8F135]/30 relative overflow-hidden">
             <div className="absolute top-0 right-0 w-32 h-32 bg-[#C8F135]/10 rounded-full blur-3xl"></div>
             <p className="font-bold mb-1 relative z-10">Get 1 Month Free 🎁</p>
             <p className="text-sm text-gray-400 mb-4 relative z-10">
-              Invite 3 friends to join FITUIT and automatically unlock 1 month of Elite for free. 
+              {dict.settings.referral_desc}
             </p>
             
             <div className="flex gap-2 items-center mb-4 relative z-10">
@@ -150,29 +156,29 @@ export default function Settings() {
 
         <form action={logout}>
           <button className="w-full text-red-500 font-bold py-4 text-center hover:bg-red-500/10 rounded-xl transition-colors">
-            Sign Out
+            {dict.settings.logout}
           </button>
         </form>
 
       </main>
 
       {/* Bottom Nav */}
-      <nav className="fixed bottom-0 w-full bg-black/90 backdrop-blur-md border-t border-gray-900 px-6 py-4 flex justify-between items-center max-w-md left-1/2 -translate-x-1/2">
+      <nav className="fixed bottom-0 w-full bg-black/90 backdrop-blur-md border-t border-gray-900 px-6 py-4 flex justify-between items-center max-w-md left-1/2 -translate-x-1/2 z-50">
         <Link href="/dashboard" className="text-gray-500 hover:text-white font-bold flex flex-col items-center transition-colors">
           <span className="text-xl mb-1">🏠</span>
-          <span className="text-[10px] uppercase tracking-wider">Home</span>
+          <span className="text-[10px] uppercase tracking-wider">{dict.nav.home}</span>
         </Link>
         <Link href="/progress" className="text-gray-500 hover:text-white font-bold flex flex-col items-center transition-colors">
           <span className="text-xl mb-1">📈</span>
-          <span className="text-[10px] uppercase tracking-wider">Progress</span>
+          <span className="text-[10px] uppercase tracking-wider">{dict.nav.progress}</span>
         </Link>
         <Link href="/diet" className="text-gray-500 hover:text-white font-bold flex flex-col items-center transition-colors">
           <span className="text-xl mb-1">🥗</span>
-          <span className="text-[10px] uppercase tracking-wider">Diet</span>
+          <span className="text-[10px] uppercase tracking-wider">{dict.nav.food}</span>
         </Link>
-        <Link href="/settings" className="text-white font-bold flex flex-col items-center">
+        <Link href="/settings" className="text-[#C8F135] font-bold flex flex-col items-center">
           <span className="text-xl mb-1">⚙️</span>
-          <span className="text-[10px] uppercase tracking-wider">Settings</span>
+          <span className="text-[10px] uppercase tracking-wider">{dict.nav.settings}</span>
         </Link>
       </nav>
     </div>

@@ -1,0 +1,36 @@
+{
+  "landing": {
+    "join_now": "Junte-se Agora",
+    "headline": "Força. Equilíbrio. Você.",
+    "subheadline": "Sem academia. Sem pesos. O híbrido definitivo de Calistenia + Yoga construído para resultados reais. Sua jornada personalizada começa aqui.",
+    "start_assessment": "Inicie Sua Avaliação",
+    "active_members": "membros ativos",
+    "reviews": "de mais de 2k avaliações"
+  },
+  "nav": {
+    "home": "Início",
+    "progress": "Progresso",
+    "food": "Comida",
+    "settings": "Configurações",
+    "dashboard": "Painel",
+    "login": "Entrar",
+    "signup": "Cadastrar"
+  },
+  "dashboard": {
+    "welcome_back": "Bem-vindo de volta",
+    "your_plan": "Seu Plano",
+    "generate_new": "Gerar Novo Plano",
+    "log_workout": "Registrar Treino",
+    "log_food": "Registrar Comida",
+    "today_meal": "Refeição de Hoje",
+    "no_plan": "Nenhum plano ativo encontrado."
+  },
+  "settings": {
+    "referral_engine": "Motor de Indicações",
+    "referral_desc": "Convide 3 amigos para ganhar 1 mês de Elite grátis!",
+    "your_invite_link": "Seu Link de Convite",
+    "logout": "Sair",
+    "language": "Idioma",
+    "select_language": "Selecionar Idioma"
+  }
+}

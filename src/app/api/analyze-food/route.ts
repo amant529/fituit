@@ -2,9 +2,6 @@ import { NextResponse } from 'next/server';
 import OpenAI from 'openai';
 import { z } from 'zod';
 
-const openai = new OpenAI({
-  apiKey: process.env.OPENAI_API_KEY,
-});
 
 const FoodAnalysisSchema = z.object({
   name: z.string(),
@@ -18,6 +15,10 @@ const FoodAnalysisSchema = z.object({
 
 export async function POST(req: Request) {
   try {
+    const openai = new OpenAI({
+      apiKey: process.env.OPENAI_API_KEY || 'dummy_key_for_build',
+    });
+
     const { imageBase64 } = await req.json();
 
     if (!imageBase64) {

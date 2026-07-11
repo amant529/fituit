@@ -1,0 +1,36 @@
+{
+  "landing": {
+    "join_now": "Bergabung Sekarang",
+    "headline": "Kekuatan. Keseimbangan. Anda.",
+    "subheadline": "Tanpa gym. Tanpa beban. Hibrida Kalistenik + Yoga terbaik yang dibangun untuk hasil nyata. Perjalanan pribadi Anda dimulai di sini.",
+    "start_assessment": "Mulai Penilaian Anda",
+    "active_members": "anggota aktif",
+    "reviews": "dari 2rb+ ulasan"
+  },
+  "nav": {
+    "home": "Beranda",
+    "progress": "Kemajuan",
+    "food": "Makanan",
+    "settings": "Pengaturan",
+    "dashboard": "Dasbor",
+    "login": "Masuk",
+    "signup": "Daftar"
+  },
+  "dashboard": {
+    "welcome_back": "Selamat datang kembali",
+    "your_plan": "Rencana Anda",
+    "generate_new": "Buat Rencana Baru",
+    "log_workout": "Catat Latihan",
+    "log_food": "Catat Makanan",
+    "today_meal": "Makanan Hari Ini",
+    "no_plan": "Tidak ada rencana aktif yang ditemukan."
+  },
+  "settings": {
+    "referral_engine": "Mesin Rujukan",
+    "referral_desc": "Undang 3 teman untuk mendapatkan 1 bulan Elite gratis!",
+    "your_invite_link": "Tautan Undangan Anda",
+    "logout": "Keluar",
+    "language": "Bahasa",
+    "select_language": "Pilih Bahasa"
+  }
+}

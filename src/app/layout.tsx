@@ -61,31 +61,39 @@ export const viewport: Viewport = {
   maximumScale: 1,
 };
 
+import { getServerDictionary, getServerLocale } from "@/i18n/server";
+import { LanguageProvider } from "@/i18n/LanguageProvider";
+
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const dict = getServerDictionary();
+  const locale = getServerLocale();
+
   return (
-    <html lang="en">
+    <html lang={locale}>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        {children}
-        <Script id="sw-register" strategy="afterInteractive">
-          {`
-            if ('serviceWorker' in navigator) {
-              window.addEventListener('load', function() {
-                navigator.serviceWorker.register('/sw.js').then(function(registration) {
-                  console.log('ServiceWorker registration successful with scope: ', registration.scope);
-                }, function(err) {
-                  console.log('ServiceWorker registration failed: ', err);
+        <LanguageProvider dictionary={dict}>
+          {children}
+          <Script id="sw-register" strategy="afterInteractive">
+            {`
+              if ('serviceWorker' in navigator) {
+                window.addEventListener('load', function() {
+                  navigator.serviceWorker.register('/sw.js').then(function(registration) {
+                    console.log('ServiceWorker registration successful with scope: ', registration.scope);
+                  }, function(err) {
+                    console.log('ServiceWorker registration failed: ', err);
+                  });
                 });
-              });
-            }
-          `}
-        </Script>
-        <InstallPrompt />
+              }
+            `}
+          </Script>
+          <InstallPrompt />
+        </LanguageProvider>
       </body>
     </html>
   );

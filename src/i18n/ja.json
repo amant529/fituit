@@ -1,0 +1,36 @@
+{
+  "landing": {
+    "join_now": "今すぐ参加",
+    "headline": "強さ。バランス。あなた。",
+    "subheadline": "ジム不要。ウェイト不要。真の結果を生み出す究極の自重トレーニング＋ヨガのハイブリッド。あなたのパーソナライズされた旅がここから始まります。",
+    "start_assessment": "評価を開始する",
+    "active_members": "アクティブメンバー",
+    "reviews": "2千件以上のレビューから"
+  },
+  "nav": {
+    "home": "ホーム",
+    "progress": "進捗",
+    "food": "食事",
+    "settings": "設定",
+    "dashboard": "ダッシュボード",
+    "login": "ログイン",
+    "signup": "サインアップ"
+  },
+  "dashboard": {
+    "welcome_back": "お帰りなさい",
+    "your_plan": "あなたのプラン",
+    "generate_new": "新しいプランを作成",
+    "log_workout": "ワークアウトを記録",
+    "log_food": "食事を記録",
+    "today_meal": "今日の食事",
+    "no_plan": "アクティブなプランが見つかりません。"
+  },
+  "settings": {
+    "referral_engine": "紹介エンジン",
+    "referral_desc": "友達を3人招待して、1ヶ月のEliteを無料でゲット！",
+    "your_invite_link": "あなたの招待リンク",
+    "logout": "ログアウト",
+    "language": "言語",
+    "select_language": "言語を選択"
+  }
+}

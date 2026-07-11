@@ -3,9 +3,6 @@ import OpenAI from 'openai';
 import { z } from 'zod';
 import { createClient } from '@supabase/supabase-js';
 
-const openai = new OpenAI({
-  apiKey: process.env.OPENAI_API_KEY,
-});
 
 const supabase = createClient(
   process.env.NEXT_PUBLIC_SUPABASE_URL || 'https://xyzcompany.supabase.co',
@@ -31,6 +28,10 @@ const FITProgramSchema = z.object({
 
 export async function POST(req: Request) {
   try {
+    const openai = new OpenAI({
+      apiKey: process.env.OPENAI_API_KEY || 'dummy_key_for_build',
+    });
+
     const { profile, imageBase64, userId } = await req.json();
 
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
