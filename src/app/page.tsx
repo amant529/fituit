@@ -6,7 +6,7 @@ export default function Home() {
     <div className="min-h-screen bg-[#0a0a0a] text-white flex flex-col font-sans">
       <header className="px-6 py-6 flex justify-between items-center max-w-7xl mx-auto w-full">
         <div className="flex items-center gap-3">
-          <Image src="/logo.png" alt="FITUIT Logo" width={48} height={48} className="drop-shadow-[0_0_15px_rgba(200,241,53,0.3)] object-contain" />
+          <Image src="/logo.jpg" alt="FITUIT Logo" width={48} height={48} className="drop-shadow-[0_0_15px_rgba(200,241,53,0.3)] object-contain" />
           <span className="text-2xl font-black tracking-tighter uppercase bg-gradient-to-r from-white to-[#C8F135] bg-clip-text text-transparent italic">
             FITUIT
           </span>

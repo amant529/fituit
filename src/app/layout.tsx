@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     description: "The ultimate Calisthenics & Yoga hybrid app. Master your body with AI-powered personalized routines.",
     siteName: "FITUIT",
     images: [{
-      url: "/logo.png",
+      url: "/logo.jpg",
       width: 1200,
       height: 630,
       alt: "FITUIT Logo"
@@ -43,13 +43,13 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "FITUIT | Strength. Balance. You.",
     description: "The ultimate Calisthenics & Yoga hybrid app. Master your body with AI-powered personalized routines.",
-    images: ["/logo.png"],
+    images: ["/logo.jpg"],
     creator: "@FITUITapp"
   },
   icons: {
-    icon: "/logo.png",
-    shortcut: "/logo.png",
-    apple: "/logo.png",
+    icon: "/logo.jpg",
+    shortcut: "/logo.jpg",
+    apple: "/logo.jpg",
   },
   manifest: "/manifest.json",
 };
